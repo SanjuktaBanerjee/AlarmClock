@@ -1,0 +1,167 @@
+/*Styling of overall page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+.display-flex{
+    display: flex;
+}
+
+.btn-set-alarm{
+    outline: none;
+    border: none;
+    background-color: rgb(231, 110, 18);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-stop-alarm{
+    outline: none;
+    border: none;
+    background-color: rgb(231, 110, 18);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+select {
+    appearance: none;
+    outline: black;
+    background-color: wheat;
+    padding: 0.5rem;
+    font-weight: bold;
+    border: none;
+    margin-right: 0.3rem;
+    cursor: pointer;
+    color: #0e141b;
+    border-color: black;
+}
+
+.margin-bottom{
+    margin-bottom: 1rem;
+}
+
+/*Styling of indiviual containers*/
+/*styling background*/
+.container-main1{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-right: 500px;
+}
+
+/*styling clock*/
+.container-clock{
+    padding: 2rem;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color:bisque;
+}
+
+.display-current-time{
+    font-size: 2rem;
+    color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    color: rgba(183, 75, 7, 0.947);
+}
+
+.form-setting-alarms{
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.container-submitbtn{
+    padding-left: 100px;
+}
+
+.btn-set-alarm{
+    border-color: black;
+    border: 10px;
+    font-size: 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: bisque;
+}
+
+.btn-set-alarm:focus,.btn-set-alarm:hover{
+    box-shadow: red 2px 2px 2px 1px
+}
+
+.btn-stop-alarm{
+    border-color: black;
+    border: 10px;
+    font-size: 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: bisque;
+}
+.btn-stop-alarm:focus,.btn-stop-alarm:hover{
+    box-shadow: red 2px 2px 2px 1px
+}
+
+.container-new-alarms{
+    width: 100%;
+}
+
+.container-new-alarms .container-new-alarms-title{
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgba(183, 75, 7, 0.947);
+}
+
+.alarm{
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.alarm .delete-alarm {
+    border-radius: 2rem;
+    background-color: rgb(231, 110, 18);
+    font-weight: bold;
+    color: wheat;
+    border: none;
+    padding: 5px 5px 5px 5px;
+}
+
+.time{
+    color: #0e141b;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/*this query will tailor the screen size according to the device*/
+@media only screen and (min-width: 600px) {
+    .container-main1 {
+      padding-block: 2rem;
+    }
+    .container-clock{
+        justify-content: center;
+        border-radius: 50px;
+        width: 450px;
+        min-height: auto;
+    }
+}
