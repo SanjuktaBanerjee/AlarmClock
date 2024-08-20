@@ -76,7 +76,8 @@ function formatTime(hour, minute, second, ampm) {
 // Load alarms from local storage
 function loadAlarms() {
   const savedAlarms = JSON.parse(localStorage.getItem("alarms")) || [];
-  savedAlarms.forEach(addAlarm);
+  activeAlarms = savedAlarms;
+  savedAlarms.forEach(alarm => displayAlarm(alarm.time));
 }
 
 // Add an alarm to the DOM and active list
@@ -120,6 +121,5 @@ function removeAlarmFromDOM(time) {
 
 // Save alarms to local storage
 function saveAlarms() {
-  const alarmTimes = activeAlarms.map(alarm => alarm.time);
-  localStorage.setItem("alarms", JSON.stringify(alarmTimes));
+  localStorage.setItem("alarms", JSON.stringify(activeAlarms));
 }
